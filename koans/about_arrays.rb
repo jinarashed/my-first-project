@@ -1,4 +1,8 @@
 require File.expand_path(File.dirname(__FILE__) + '/neo')
+data_set = []
+data_set = ["xxx", 1]
+data_set << 222
+data_set.class
 
 class AboutArrays < Neo::Koan
   def test_creating_arrays
