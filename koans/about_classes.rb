@@ -6,7 +6,7 @@ class AboutClasses < Neo::Koan
 
   def test_instances_of_classes_can_be_created_with_new
     fido = Dog.new
-    assert_equal Dog, fido.class
+    assert_equal AboutClasses::Dog, fido.class
   end
 
   # ------------------------------------------------------------------
@@ -22,7 +22,7 @@ class AboutClasses < Neo::Koan
     assert_equal [], fido.instance_variables
 
     fido.set_name("Fido")
-    #assert_equal ["@name"], fido.instance_variables
+    assert_equal [:@name], fido.instance_variables
   end
 
   def test_instance_variables_cannot_be_accessed_outside_the_class
